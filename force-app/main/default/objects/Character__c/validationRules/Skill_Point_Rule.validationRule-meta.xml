@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skill_Point_Rule</fullName>
+    <active>true</active>
+    <description>This rule helps prevent over scoring the 27 points a D&amp;D character is allotted.</description>
+    <errorConditionFormula>Strength__c  &gt;= 10     ||
+Wisdom__c   &gt;= 10      ||
+Charisma__c   &gt;= 10    ||
+Constitution__c  &gt;= 10 ||
+Dexterity__c   &gt;= 10   ||
+Intelligence__c   &gt;= 10</errorConditionFormula>
+    <errorMessage>The skill must be 0-10.</errorMessage>
+</ValidationRule>

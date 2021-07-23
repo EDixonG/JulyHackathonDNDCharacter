@@ -1,0 +1,13 @@
+<aura:component controller="descriptionCrontroller" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="data" type="Object" />
+    <aura:attribute name="columns" type="List" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.fetchData}" />
+    
+    <lightning:datatable
+        data = "{!v.data}"
+        columns = "{!v.columns}"
+        keyField = "id"
+        hideCheckboxColumn = "true" />
+	
+</aura:component>
